@@ -36,13 +36,11 @@ class WeatherViewController: UIViewController , MKMapViewDelegate , WeatherDeleg
         super.viewDidLoad()
         mapView.isZoomEnabled = false
         mapView.isScrollEnabled = false
-        //////TODO: Weather Delegate
         weather = Client(deleGate: self)
         tempLabel.text = ""
          weather.getWeatherByCoor(lat: coordinate.latitude, lon: coordinate.longitude)
         print("latitude : \(coordinate.latitude)")
          print("longitude : \(coordinate.longitude)")
-        //print(weather.getWeatherByCoor(lat: coordinate.latitude, lon: coordinate.longitude))
        
     }
     
@@ -124,11 +122,6 @@ class WeatherViewController: UIViewController , MKMapViewDelegate , WeatherDeleg
 }
 }
 
-extension WeatherViewController {
-   
-    //var url = URL(string: "http://openweathermap.org/img/wn/10d@2x.png")
-    
-}
 extension UIImageView {
     func downloaded(from url: URL, contentMode mode: UIView.ContentMode = .scaleAspectFit) {
         contentMode = mode

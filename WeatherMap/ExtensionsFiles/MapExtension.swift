@@ -27,7 +27,6 @@ extension PinMapViewController  {
         return pinView
     }
     
-    ///////////////////////////////////////////////////////////TODO:SELCET THE MAP PIN-
     func mapView(_ mapView: MKMapView, didSelect view: MKAnnotationView){
         guard let annotation =  view.annotation else {
             return
